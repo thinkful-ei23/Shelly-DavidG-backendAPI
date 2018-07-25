@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* global shoppingList, cuid, store, item, api $ */
+=======
+/* global shoppingList, cuid, store, Item, api, $ */
+>>>>>>> 4919984d255fbdf8daba54e4dd9ca151ed0750b0
 'use strict';
 // eslint-disable-next-line no-unused-vars
 const shoppingList = (function(){
@@ -25,6 +29,7 @@ const shoppingList = (function(){
           </button>
         </div>
       </li>`;
+<<<<<<< HEAD
 	}
   
   
@@ -90,7 +95,6 @@ const shoppingList = (function(){
 		});
 	}
 
-  
 	// function toggleCheckedItemsFilter() {
 	// 	store.hideCheckedItems = !store.hideCheckedItems;
 	// }
