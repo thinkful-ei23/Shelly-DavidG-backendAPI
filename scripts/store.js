@@ -16,13 +16,8 @@ const store = (function () {
 		return store.items.find(item => item.id === id);
 	};
 
-	const addItem = function(name) {
-		try {
-			Item.validateName(name);
-			this.items.push(Item.create(name));
-		} catch(error) {
-			console.log('Cannot add items:' + error.message);
-		}
+	const addItem = function(item) {
+		this.items.push(item);
 	};
 
 	const findAndToggleChecked = function(id) {
