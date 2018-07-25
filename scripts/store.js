@@ -26,8 +26,8 @@ const store = (function () {
 	};
 
 	const findAndDelete = function(id) {
-		let foundItem = this.findById(id);
-		store.items = store.items.filter(item => item !== foundItem);
+		store.items = store.items.filter(item => item.id !== id);
+    
 	};
 
 	const toggleCheckedFilter = function(id) {
