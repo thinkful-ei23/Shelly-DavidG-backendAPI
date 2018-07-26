@@ -3,12 +3,7 @@
 
 const store = (function () {
 
-	let items = [
-		{ id: cuid(), name: 'apples', checked: false },
-		{ id: cuid(), name: 'oranges', checked: false },
-		{ id: cuid(), name: 'milk', checked: true },
-		{ id: cuid(), name: 'bread', checked: false }
-	];
+	let items = [];
 	let hideCheckedItems = false;
 	let searchTerm = '';
     
@@ -25,8 +20,12 @@ const store = (function () {
 		Object.assign(newFoundItem, newData);
 	};
 
+	const updateStore = function(id) {
+		this.items = this.items.filter(item => item.id !== id);
+	}
+
 	const findAndDelete = function(id) {
-		store.items = store.items.filter(item => item.id !== id);
+		this.items = this.items.filter(item => item.id !== id);
     
 	};
 
@@ -38,5 +37,5 @@ const store = (function () {
 		this.searchTerm = val;
 	};
 
-	return {items, hideCheckedItems, searchTerm, findById, addItem, findAndUpdate, findAndDelete, toggleCheckedFilter, setSearchTerm};
+	return {items, hideCheckedItems, searchTerm, findById, addItem, findAndUpdate, findAndDelete, toggleCheckedFilter, setSearchTerm, updateStore};
 }() );

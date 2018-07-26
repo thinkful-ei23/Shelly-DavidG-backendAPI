@@ -63,7 +63,7 @@ const shoppingList = (function(){
 				store.addItem(newItem);
 				render();
 			});
-			render();
+
 		});
 	}
   
@@ -86,7 +86,7 @@ const shoppingList = (function(){
 		$('.js-shopping-list').on('click', '.js-item-delete', event => {
 			// get the index of the item in store.items
 			const id = getItemIdFromElement(event.currentTarget);
-			api.deleteItem(id, store.findAndDelete(id));
+			api.deleteItem(id ,store.findAndDelete(id));
 			console.log('deleted');
 			// render the updated shopping list
 			render();

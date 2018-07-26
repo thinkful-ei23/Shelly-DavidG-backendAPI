@@ -32,7 +32,8 @@ const api = (function(){
 		});
 	};
   
-	const deleteItem = function(id, callback) {
+	const deleteItem = function(id,callback) {
+		console.log(id);
 		$.ajax({
 			url : BASE_URL + '/items/' + id,
 			method : 'DELETE',
